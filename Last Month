@@ -1,0 +1,5 @@
+Sales_LM = 
+CALCULATE([Sales] , 
+PARALLELPERIOD(Dim_Date[Date] , -1 , MONTH) ,
+Dim_Date[Month_Flag] = TRUE()
+)
