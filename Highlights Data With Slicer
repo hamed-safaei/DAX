@@ -1,0 +1,12 @@
+Highlights Categories = 
+VAR Category_chosen = 
+    COUNTROWS(
+        INTERSECT(
+            VALUES( 'Highlights Category Table'[MonthShort]) ,
+            VALUES ( Dim_Date[MonthShort])
+        )
+    )
+RETURN
+    IF( ISFILTERED ( 'Highlights Category Table'[MonthShort]) , Category_chosen , 0 )
+
+------> Hexa_Highlights_Category = IF([Highlights Categories] = 1 , "#FFF9C4" , "White" )
