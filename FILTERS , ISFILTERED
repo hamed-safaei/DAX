@@ -1,0 +1,6 @@
+Category_Filter_Info = 
+IF(
+    ISFILTERED(Sales[Category]), 
+    "Filtered: " & COUNTROWS(FILTERS(Sales[Category])) & " selected", 
+    "Not Filtered"
+)
