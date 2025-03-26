@@ -1,0 +1,4 @@
+Sales_SMLY = 
+CALCULATE([Sales] , 
+SAMEPERIODLASTYEAR(Dim_Date[Date]) ,
+Dim_Date[Year_flag] = TRUE )
